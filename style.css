@@ -1,0 +1,567 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: #0b0c10;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+/*bg image style*/
+
+/*end of banner style*/
+
+/*style contact*/
+
+.con {
+  width: 100%;
+  letter-spacing: 5px;
+  font-family: "Cinzel", serif;
+  color: grey;
+  height: auto;
+
+  color: #ffff;
+  margin-top: 0px;
+}
+/*end os contact style*/
+
+/*footer*/
+.foot {
+  color: #ffff;
+  height: auto;
+  width: 100%;
+  padding: 60px;
+  font-family: "Cinzel", serif;
+  letter-spacing: 3px;
+  margin: 0px;
+}
+
+/*end footer*/
+
+/*about style*/
+
+#ab {
+  margin-top: 60px;
+}
+
+.aboutp {
+  color: #ffff;
+  margin-top: 25px;
+  font-family: "Abel", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: justify;
+}
+/*about ends*/
+
+/*navbar style*/
+
+nav {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  z-index: 888;
+  animation: 2s fadeInNav ease;
+}
+
+@keyframes fadeInNav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    top: -25px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.navWrapper {
+  width: 85%;
+  margin: auto;
+}
+
+#logo {
+  color: #292929;
+  font-size: 30px;
+  font-weight: normal;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.right {
+  float: right;
+  position: relative;
+}
+
+#nav-icon {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  z-index: 2;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg) scale(0.4);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 9px;
+  width: 100%;
+  background: #292929;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 18px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 36px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+  background: white;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+  background: white;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+  background: white;
+}
+
+.overlay {
+  font-family: "Cinzel", serif;
+  letter-spacing: 3px;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay a {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-left: 135px;
+  margin-bottom: 15px;
+  opacity: 0;
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 20px;
+  margin-left: 135px;
+  opacity: 0;
+}
+
+.overlay p.open {
+  opacity: 1;
+  animation: 1.7s fadeInCopyright ease;
+}
+
+@keyframes fadeInCopyright {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay a:after {
+  position: absolute;
+  transition: 0.3s;
+  content: "";
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: white;
+  left: 0;
+}
+
+.overlay a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.overlay a.open:hover {
+  transform: translateY(2px);
+}
+
+.overlay a.open:nth-child(1) {
+  opacity: 1;
+  animation: 1s fadeInLinks1 ease;
+}
+
+@keyframes fadeInLinks1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay a.open:nth-child(2) {
+  opacity: 1;
+  animation: 1.25s fadeInLinks2 ease;
+}
+
+@keyframes fadeInLinks2 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay a.open:nth-child(3) {
+  opacity: 1;
+  animation: 1.5s fadeInLinks3 ease;
+}
+
+@keyframes fadeInLinks3 {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay a.open:nth-child(4) {
+  opacity: 1;
+  animation: 1.75s fadeInLinks4 ease;
+}
+
+@keyframes fadeInLinks4 {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay a.open:nth-child(5) {
+  opacity: 1;
+  animation: 2s fadeInLinks3 ease;
+}
+
+@keyframes fadeInLinks3 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner-section {
+  background: url("pix.jpeg") no-repeat top right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 940px;
+  position: relative;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+
+  max-width: 100%;
+  height: 100%;
+}
+.content-inner {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-section .content-inner .hero-text {
+  color: white;
+  font-size: 3rem;
+  font-weight: 100;
+  display: block;
+}
+.banner-section .content-inner p {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/*nav end*/
+
+/*slidean*/
+.slideanim {
+  visibility: hidden;
+}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/*social icons*/
+.soc {
+  font-family: "Cinzel", serif;
+  letter-spacing: 3px;
+  margin: 0px;
+  background-color: #46344e;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 20px;
+  height: auto;
+  padding: 40px;
+  background: transparent;
+}
+/*social icon*/
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+  margin-bottom: 20px;
+}
+
+.social-network a.icoRss:hover {
+  background-color: #f56505;
+}
+.social-network a.icoFacebook:hover {
+  background-color: #3b5998;
+}
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff;
+}
+.social-network a.icoGoogle:hover {
+  background-color: #bd3518;
+}
+.social-network a.icoVimeo:hover {
+  background-color: #0590b8;
+}
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+.social-network a.icoRss:hover i,
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+a.socialIcon:hover,
+.socialHoverClass {
+  color: #44bcdd;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: red;
+}
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.social-circle a {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.social-circle i {
+  color: #fff;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+/*end of social icons*/
+
+/*soc icons*/
+
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+/*demo*/
+
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
